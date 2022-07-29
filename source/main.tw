@@ -1,0 +1,141 @@
+:: StoryData
+{
+    "ifid": "219057AC-92BB-4E8F-84BA-019E24664A82",
+    "format": "Harlowe",
+    "format-version": "3.3.1",
+    "start": "Start"
+}
+
+:: StoryTitle
+Susan the Scrum Master
+
+:: Start
+
+    //You enter a conference room and remember that Susan has schedule some time to speak with you. She looks up.//
+
+    Oh good, you are here! The CEO has tasked my team with reducing customer enrollment time from a month to a minute! And he's only given us 8 weeks. We have no experience with such a short timeframe and are at our wits end!
+
+    //What is your response to Susan?//
+
+    [[You should push back.->PushBack]]
+
+    [[Wow! Tell me more of your thoughts on this.->TellMeMore]]
+
+    [[I think you should create an MVP. When can we schedule a 1-day workshop?->MVP]]
+
+:: Advice [mentoring]
+
+    //You chose to explain your experience and offered the coachee the mentoring path.//
+
+    Susan agrees.
+    
+    //You offer the team a 4 hour use story splitting workshop, a reference to a user-story splitting mini-book, or for you to take a look at some of the stories and give further advice.//
+    
+    The team decides to read the book and give story splitting another go. 
+
+    [[Later that week...->Advice.Next]]
+    
+:: Advice.Next [mentoring]
+
+    We're close, but the book just wasn't enough.
+
+    //What do you say to Susan?//
+
+    [[Looks like you gave it your all, time to push back.->PushBack]]
+    
+    [[I have some anecdotes on how other teams have approached this.->Mentoring]]
+    
+    [[Who or what else could you draw on to help here?->WhatElse]]
+
+:: Mentoring [mentoring]
+
+    //You chose to explain your experience and offered the coachee the mentoring path.//
+
+    Susan agrees. 
+    
+    You share a few stories about how a team in a similar space split their stories. The team gets some new ideas from the stories and create an MVP they are happy with.
+
+    [[At the next All-Hands Meeting->Mentoring.Ending]]
+
+:: Mentoring.Ending [endFrame]
+
+    You find out later that the CEO was happy with the result and praised the team at the company all-hands meeting.
+
+    Congratulations and thanks for playing!
+
+:: MVP [action]
+    
+    //You advocated a specific course of action for the coachee.//
+
+    Hmm, let me go ask the team and I'll get back to you on that. 
+
+    [[Later that week...->MVP.Ending]]
+
+:: MVP.Ending [action endFrame]
+
+    //When you run into her later and ask her what's up, she says dissappointedly;//
+
+    The team decided we didn't have enough time for that; we asked the CEO for more time and he gave the project to another team.
+
+:: Options [coaching]
+
+    //You chose the coaching option of asking an open ended question.//
+
+    Well, I could ask the CEO for more time, but this is a huge opportunity and I'd rather find a way to show that we can rise to the occasion, so I'd prefer to find ways to produce something valuable in 8 weeks. I just don't see how.
+
+    //What do you say to Susan?//
+
+    [[Looks like you gave it your all, time to push back.->PushBack]]
+    
+    [[I used to be a PO, would you like some advice?->Advice]]
+    
+    [[Who or what else could you draw on here?->WhatElse]]
+
+:: PushBack [action]
+    //You advocated a specific course of action for the coachee.//
+
+    Susan is quiet for a moment.
+
+    //Ok, talk to you later.// 
+
+    They give a quick smile and heads off. 
+
+    [[Later that week...->PushBack.Ending]]
+
+:: PushBack.Ending [action endFrame]
+
+    You find out from the product owner that Susan thought of the opportunity as a real challenge and was looking for ways to help the team get something done to impress the CEO.
+
+:: TellMeMore [coaching]
+
+    //You chose the coaching option of asking an open ended question.//
+
+    Sure. We've chunked out the work into stories and estimated them. We just can't get it all done in the time allotted. Some of the stories are really big so we can't even see how to do just an MVP.
+
+    //What do you say to Susan?//
+
+    [[Looks like you gave it your all, time to push back.->PushBack]]
+    
+    [[What options do you see on the table at the moment?->Options]]
+    
+    [[I used to be a PO, would you like some advice?->Advice]]
+    
+    [[Who or what else could you draw on to help here?->WhatElse]]
+
+:: WhatElse [coaching]
+
+    //You chose the coaching option of asking an open ended question.//
+
+    Hmm. Let me see. 
+    
+    Hmm. 
+    
+    Well... 
+    
+    I could ask Joe for help. He's a really seasoned Product owner and he's great at splitting user stories. But, I'd rather save that option in case we can't figure it out on our own.
+
+    //What do you say to Susan?//
+
+    [[Looks like you gave it your all, time to push back.->PushBack]]
+   
+    [[I used to be a PO, would you like some advice?->Advice]]
