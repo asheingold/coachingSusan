@@ -20,7 +20,7 @@ jobs:
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
-          tweego main.tw -f harlow-3 -o dist/index.html
+          tweego main.tw -f harlowe-3 -o dist/index.html
 
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v3
